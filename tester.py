@@ -38,7 +38,7 @@ def render_calendar(year=now.year, month=now.month):
 def search():
     _year = int(request.forms['year'])
     _month = int(request.forms['month'])
-    return template('view\calendar', calendar = c.formatmonth(_year,_month),
+    return template('calendar', calendar = c.formatmonth(_year,_month),
                     **cal(_year, _month))
 
 @error(404)
