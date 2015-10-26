@@ -5,6 +5,7 @@ import os
 
 c = calendar.HTMLCalendar()
 now = datetime.datetime.now()
+PORT = int(os.environ.get("PORT", 5000))
 
 c.setfirstweekday(calendar.SUNDAY)
 
@@ -45,4 +46,4 @@ def search():
 def error404(error):
      return 'Nothing here'
         
-run(host='localhost', port=8090, debug = True)
+run(host='0.0.0.0', port=PORT, debug=False)
