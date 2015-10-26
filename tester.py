@@ -30,7 +30,7 @@ def render_calendar(year=now.year, month=now.month):
    
      year = int (year)
      month = int (month)
-     return template('view\calendar', calendar = c.formatmonth(year,month),
+     return template('calendar', calendar = c.formatmonth(year,month),
                     **cal(year, month))
 
 
