@@ -9,7 +9,7 @@ PORT = int(os.environ.get("PORT", 5000))
 
 c.setfirstweekday(calendar.SUNDAY)
 
-TEMPLATE_PATH.insert(0, 'View')
+TEMPLATE_PATH.insert(0, 'view')
 def cal(year, month):
     return {
             'n_year': year + month // 12,
@@ -31,7 +31,7 @@ def render_calendar(year=now.year, month=now.month):
    
      year = int (year)
      month = int (month)
-     return template('view\calendar', calendar = c.formatmonth(year,month),
+     return template('calendar', calendar = c.formatmonth(year,month),
                     **cal(year, month))
 
 
@@ -39,7 +39,7 @@ def render_calendar(year=now.year, month=now.month):
 def search():
     _year = int(request.forms['year'])
     _month = int(request.forms['month'])
-    return template('view\calendar', calendar = c.formatmonth(_year,_month),
+    return template('calendar', calendar = c.formatmonth(_year,_month),
                     **cal(_year, _month))
 
 @error(404)
