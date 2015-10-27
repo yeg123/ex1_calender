@@ -7,10 +7,10 @@ c = calendar.HTMLCalendar()
 now = datetime.datetime.now()
 PORT = int(os.environ.get("PORT", 5000))
 
-c.setfirstweekday(calendar.SUNDAY)
 
-TEMPLATE_PATH.insert(0, 'view')
-def cal(year, month):
+c.setfirstweekday(calendar.SUNDAY)
+TEMPLATE_PATH.insert(0, 'View')
+def cal(year=now.year, month=now.month):
     return {
             'n_year': year + month // 12,
             'n_month': month %12 + 1,
@@ -18,6 +18,10 @@ def cal(year, month):
             'p_month': month % 13 -1 or 12,
             'j_year': year,
             'j_month': month,
+            'add_year':year +1,
+            'minus_year':year-1,
+            'today_year': now.year,
+            'today_month':now.month,
             }
 
 
@@ -31,7 +35,7 @@ def render_calendar(year=now.year, month=now.month):
    
      year = int (year)
      month = int (month)
-     return template('calendar', calendar = c.formatmonth(year,month),
+     return template('view\calendar', calendar = c.formatmonth(year,month),
                     **cal(year, month))
 
 
@@ -39,11 +43,11 @@ def render_calendar(year=now.year, month=now.month):
 def search():
     _year = int(request.forms['year'])
     _month = int(request.forms['month'])
-    return template('calendar', calendar = c.formatmonth(_year,_month),
+    return template('view\calendar', calendar = c.formatmonth(_year,_month),
                     **cal(_year, _month))
 
 @error(404)
 def error404(error):
      return 'Nothing here'
-        
+
 run(host='0.0.0.0', port=PORT, debug=False)

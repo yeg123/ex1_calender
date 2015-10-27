@@ -12,7 +12,20 @@ body
     justify-content: center;
     align-items: center;
     margin: auto;
+   
 }
+#p1
+{
+     border: 2px solid brown;
+}
+#p3
+{
+     font-size:20px;
+     border: 2px solid red;
+     display: flex;
+     align-items: center;
+}
+
 
 input,gobtn
 {
@@ -23,7 +36,7 @@ input,gobtn
 }
 input
 {
-     background-color: white;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     width: 12em;
@@ -38,6 +51,7 @@ th,td,a
 
 a
 {
+    padding: 13px;
     text-decoration: none;
     outline: none;
     font-weight: 600;
@@ -47,4 +61,33 @@ a
 {
     flex: auto;
     text-align: center;
+}
+
+p
+{
+   display:flexbox;
+   margin-right: auto;
+   border: 2px solid blue;
+   padding: 5px;
+}
+#pr_y
+{
+    padding:16px;
+    color:orange;
+}
+#ne_y
+{
+    padding:22px;
+    color:black;
+}
+#pr_m
+{
+    margin-left:auto;
+    color:green;
+
+}
+#ne_m
+{
+    color:red;
+    margin-right: auto ;
 }

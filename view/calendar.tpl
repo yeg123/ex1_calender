@@ -24,9 +24,18 @@
     <div class="container">
    <div>
             {{! calendar}}
-            <p style="display:flexbox">
-                <a href="/{{p_year}}/{{p_month}}" class="cal"> &lt;  Prev  </a>
-                <a href="/{{n_year}}/{{n_month}}" class="cal">   Next  > </a>
+            <p id ="p1">
+                <a id="pr_m" href="/{{p_year}}/{{p_month}}" class="cal"> &lt;  Prev month </a>
+                <a id="ne_m" href="/{{n_year}}/{{n_month}}" class="cal"> Next month  > </a>
+            </p>
+
+			<p id ="p2">
+				<a id="pr_y" href="/{{minus_year}}/{{j_month}}" class="cal"> &lt; Prev year   </a>
+                <a id="ne_y" href="/{{add_year}}/{{j_month}}" class="cal">   Next year > </a>
+            </p>
+
+			<p id ="p3">
+				<a id="tod_y" href="/{{today_year}}/{{today_month}}" class="cal"> Today  </a>
             </p>
 
         </div>
