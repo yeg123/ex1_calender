@@ -10,6 +10,7 @@ PORT = int(os.environ.get("PORT", 5000))
 
 c.setfirstweekday(calendar.SUNDAY)
 TEMPLATE_PATH.insert(0, 'view')
+TEMPLATE_PATH.insert(0, 'static')
 def cal(year=now.year, month=now.month):
     return {
             'n_year': year + month // 12,
