@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/static/stylesheet.css" />
-
+    <script type="text/javascript" src="static/JS1.js"></script>
     <title>calender</title>
 </head>
 <body>
 
  <div id = "input">
-	 <form action ="/search" method = "post">
+	 <form name="frm1" action ="/search" method = "post">
 	 <input type="text" name="year" pattern="[1-9][0-9]{3}" title="input only four digit, first digit not zero" placeholder= "Enter year" maxlength="255" />
-     <input type="text" name="month" pattern="(0[1-9]|1[012])" title="input only  two digit and lass than 13" placeholder= "Enter month" maxlength="255"/>
+     <input type="text" name="month" pattern="(0[1-9]|1[012])" title="input only  two digit and lass than 13" placeholder= "Enter month" maxlength="255" />
 </div>
  <div id = "gobtn">
-     <input type="submit" name="search" value = 'go' />
+     <input type="submit" name="search" value = 'go' onclick="return checkTextField()"  />
 	 <a href="/{{j_year}}/{{j_month}}" > </a>
 	 </form>
   
