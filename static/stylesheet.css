@@ -5,49 +5,71 @@ body
     padding-bottom: 50%;
 }
 
-.container
+.month
 {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-   
+    width:50%;
+    margin-bottom:25px;
+    margin-left:30%;
 }
 #p1
 {
+    background-color:gray;
+     border-radius:4px;
      border: 2px solid brown;
+     width:23%;
+     align-items: center;
+     padding:10px;
+     margin-left:42%;
+     margin-bottom:20px;
+}
+
+#p2
+{
+    background-color:pink;
+   padding:10px;
+   border: 2px solid blue;
+   width:23%;
+   align-items: center;
+   margin-left:42%;
+   margin-bottom:20px;
+   border-radius:4px;
 }
 #p3
 {
+    border-radius:4px;
+     padding:10px;
+     width:23%;
+     background-color:deepskyblue;
      font-size:20px;
      border: 2px solid red;
-     display: flex;
      align-items: center;
+     font-style:italic;
+     margin-left:42%;
 }
 
 
-input,gobtn
+.btn-success {
+    width: 50%;
+    margin-left: 31%;
+    margin-bottom: 20px;
+}
+#gobtn
 {
+     width:23%;
      margin-bottom: 12px;
+     margin-left: 40%;
+     align-items: center;
+}
+    
+#input
+{
+    
+     margin-bottom: 17px;
      margin-left: 40%;
      align-items: center;
      padding-right: 32px;
 }
-input
-{
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    width: 12em;
-    display: inline;
-    padding: 7px;
-}
-th,td,a
-{ 
-    padding: 5px;
-    color: #002a80;
-}
+
 
 a
 {
@@ -56,38 +78,42 @@ a
     outline: none;
     font-weight: 600;
 }
-
+    
 .cal
 {
     flex: auto;
     text-align: center;
 }
 
-p
-{
-   display:flexbox;
-   margin-right: auto;
-   border: 2px solid blue;
-   padding: 5px;
-}
+
 #pr_y
 {
     padding:16px;
     color:orange;
+    align-items:center
 }
 #ne_y
 {
-    padding:22px;
+    padding:22px; 
     color:black;
+    align-items:center;
 }
 #pr_m
 {
     margin-left:auto;
     color:green;
-
+    align-items:center;
 }
 #ne_m
 {
+    align-items:center;
     color:red;
     margin-right: auto ;
+}
+
+#tod_y
+{
+    color:red;
+    align-items: center;
+    margin-left:70px;
 }

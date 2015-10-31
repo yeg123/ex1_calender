@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/static/stylesheet.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script type="text/javascript" src="static/JS1.js"></script>
     <title>calender</title>
 </head>
@@ -15,7 +16,8 @@
      <input type="text" name="month" pattern="(0[1-9]|1[012])" title="input only  two digit and lass than 13" placeholder= "Enter month" maxlength="255" />
 </div>
  <div id = "gobtn">
-     <input type="submit" name="search" value = 'go' onclick="return checkTextField()"  />
+   <input type="submit" class="btn btn-success" name="search" value = 'go' onclick="return checkTextField()"  /> 
+	
 	 <a href="/{{j_year}}/{{j_month}}" > </a>
 	 </form>
   
